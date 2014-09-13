@@ -3,14 +3,14 @@ package maxPointsOnALine;
 import java.util.HashMap;
 import java.util.Set;
 
-class Point {
+class RickyPoint {
 	int x;
 	int y;
-	public Point(int x, int y) {
+	public RickyPoint(int x, int y) {
 		this.x = x;
 		this.y = y;
 	}
-	public Point() {
+	public RickyPoint() {
 		this.x = 0;
 		this.y = 0;
 	}	
@@ -21,7 +21,7 @@ class Point {
  *
  */
 public class MaxPointsOnALine {
-	public int maxPoints(Point[] points) {
+	public int maxPoints(RickyPoint[] points) {
 	       if (points == null || points.length == 0){
 	           return 0;
 	       }
