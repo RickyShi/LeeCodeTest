@@ -65,4 +65,54 @@ public class SortList {
 	        tmp.next = (r==null)? l : r;
 	    return rtn;
 	    }
+	   
+	    /**
+	     * Using QuickSort
+	     * @param head
+	     * @return
+	     */
+	    public ListNode sortList2(ListNode head) {
+	        if (head == null) {
+				return null;
+			}
+			if(head.next==null){
+				return head;
+			}
+			
+			int val = head.val;
+			ListNode preChangeLast = null;
+			ListNode changeLast = head;
+			ListNode nextNode = head.next;
+			while (nextNode != null) {
+				if (nextNode.val < val) {
+					if (nextNode.val != changeLast.next.val) {
+						int ex = nextNode.val;
+						nextNode.val = changeLast.next.val;
+						changeLast.next.val = ex;
+					}
+					preChangeLast = changeLast;
+					changeLast = changeLast.next;
+				}
+				nextNode = nextNode.next;
+			}
+			int ex = changeLast.val;
+			changeLast.val = val;
+			head.val = ex;
+			ListNode nextLeft = changeLast.next;
+			while(nextLeft!=null){
+				if(nextLeft.val>changeLast.val){
+					break;
+				}
+				nextLeft=nextLeft.next;
+			}
+			if(nextLeft!=null&&nextLeft.next!=null){
+				sortList(nextLeft);
+			}
+			if(preChangeLast!=null){
+				preChangeLast.next=null;
+				sortList(head);
+				preChangeLast.next = changeLast;
+			}
+			return head;
+	    }
 }
