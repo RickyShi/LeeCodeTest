@@ -22,13 +22,13 @@ public class BinaryTreeInorderTraversalNotRec {
 		// flag=true表示左子树都已经处理完了，可以处理右子树。
 		// 栈中保存的元素都是栈底那个元素的左子树。
 		boolean flag = true;
-		stack.add(root);
+		stack.push(root);
 		while (!stack.isEmpty()) {
 			TreeNode treeNode = stack.peek();
 			if (flag) {
 				// push left subtree left nodes
 				if (treeNode.left != null) {
-					stack.add(treeNode.left);
+					stack.push(treeNode.left);
 					treeNode = treeNode.left;
 				} else {
 					flag = false;
