@@ -24,7 +24,6 @@ public class BinaryTreePreorderTraverseNotRecComplex {
 				if (treeNode.left != null) {
 					stack.push(treeNode.left);
 					list.add(stack.peek().val);
-					treeNode = treeNode.left;
 				} else {
 					flag = true;
 				}
