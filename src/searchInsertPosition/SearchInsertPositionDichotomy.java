@@ -1,10 +1,10 @@
 package searchInsertPosition;
 
 /**
- * dichotomy method is much better
- *
+ * Dichotomy method is much better
+ * 
  * @author Ricky
- *
+ * 
  */
 public class SearchInsertPositionDichotomy {
 	public int searchInsertDichotomy(int[] A, int target) {
