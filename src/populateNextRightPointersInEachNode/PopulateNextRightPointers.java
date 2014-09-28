@@ -2,7 +2,7 @@ package populateNextRightPointersInEachNode;
 
 /**
  * Definition for binary tree with next pointer. public class TreeLinkNode {
- * 
+ *
  * int val;
  *
  * TreeLinkNode left, right, next;
@@ -13,6 +13,8 @@ package populateNextRightPointersInEachNode;
  */
 public class PopulateNextRightPointers {
 	public void connect(TreeLinkNode root) {
+		// reference to same root
+		// the change of the value will affect these three var together
 		TreeLinkNode head = root;
 		TreeLinkNode tail = root;
 		if (root == null) {
