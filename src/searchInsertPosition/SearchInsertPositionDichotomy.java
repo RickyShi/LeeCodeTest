@@ -2,9 +2,9 @@ package searchInsertPosition;
 
 /**
  * Dichotomy method is much better
- * 
+ *
  * @author Ricky
- * 
+ *
  */
 public class SearchInsertPositionDichotomy {
 	public int searchInsertDichotomy(int[] A, int target) {
@@ -13,7 +13,7 @@ public class SearchInsertPositionDichotomy {
 		}
 		int left = 0;
 		int right = A.length - 1;
-		while (left < right) {
+		while (left <= right) {
 			if (A[left] > target) {
 				return left;
 			} else if (A[right] < target) {
