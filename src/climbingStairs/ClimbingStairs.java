@@ -1,9 +1,9 @@
 package climbingStairs;
 
-public class climbingStairs {
+public class ClimbingStairs {
 	/**
 	 * DP Solution num[n]=num[n-1]+num[n-2]; num[1]=1; num[2]=2;
-	 * 
+	 *
 	 * @param n
 	 * @return
 	 */
