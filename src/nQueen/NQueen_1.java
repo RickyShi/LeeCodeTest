@@ -59,4 +59,5 @@ public class NQueen_1 {
 		}
 		return false;
 	}
+
 }
