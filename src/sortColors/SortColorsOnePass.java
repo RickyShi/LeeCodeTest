@@ -28,6 +28,8 @@ public class SortColorsOnePass {
 		int rIndex = 0, bIndex = A.length - 1;
 		// make last while loop iterate less steps
 		// could not use the following two loops
+		// then just set
+		// int index = 0;
 		while (rIndex <= A.length - 1 && A[rIndex] == 0) {
 			rIndex++;
 		}
@@ -35,6 +37,7 @@ public class SortColorsOnePass {
 			bIndex--;
 		}
 		int index = rIndex;
+
 		// The VIP Loop
 		while (index <= bIndex) {
 			if (A[index] == 0) {
