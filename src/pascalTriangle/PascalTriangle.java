@@ -3,6 +3,17 @@ package pascalTriangle;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Given numRows, generate the first numRows of Pascal's triangle.
+ *
+ * See PascalTriangle2
+ *
+ * Only need two List for this case, not necessary three as follows
+ *
+ *
+ * @author Ricky
+ * 
+ */
 public class PascalTriangle {
 	public List<List<Integer>> generate(int numRows) {
 		List<List<Integer>> rtn = new ArrayList<List<Integer>>();
