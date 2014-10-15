@@ -31,28 +31,29 @@ public class SubSet1 {
 		if (S == null) {
 			return null;
 		}
-		ArrayList<ArrayList<Integer>> rtn = new ArrayList<ArrayList<Integer>>();
+
+		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
 		// empty set is the subset of any set
-		rtn.add(new ArrayList<Integer>());
+		result.add(new ArrayList<Integer>());
 
 		// sort array to statisfy the requirement of non-descending order
 		Arrays.sort(S);
 
-		dfsWorker(S, 0, rtn, new ArrayList<Integer>());
+		dfsWorker(S, 0, result, new ArrayList<Integer>());
 
-		return rtn;
+		return result;
 	}
 
 	@SuppressWarnings("unchecked")
-	private void dfsWorker(int[] S, int position, ArrayList<ArrayList<Integer>> rtn, ArrayList<Integer> temp) {
-		for (int i = 0; i < S.length; i++) {
+	public void dfsWorker(int[] S, int position, ArrayList<ArrayList<Integer>> result, ArrayList<Integer> temp) {
+		for (int i = position; i < S.length; i++) {
 			temp.add(S[i]);
 
 			// call dfsWorker() recursively
-			dfsWorker(S, i + 1, rtn, temp);
-
-			rtn.add((ArrayList<Integer>) temp.clone());
-			temp.remove(S[i]);
+			dfsWorker(S, i + 1, result, temp);
+			result.add((ArrayList<Integer>) temp.clone());
+			// remove current element from temp before next interation
+			temp.remove(temp.size() - 1);
 		}
 	}
 }

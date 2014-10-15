@@ -87,8 +87,11 @@ public class SwapNodesInPairs {
 	 * 
 	 * 然后就是进行链表交换。
 	 * 
+	 * NO NEED TO USE
+	 * NEXTSTART---------------------------------------------------------
 	 * 需要用一个临时指针nextstart， 指向下一个需要交换的pair的第一个node，保证下一次交换的正确进行。
-	 * 
+	 * ------------------------------------------------------------------------
+	 *
 	 * 然后就进行正常的链表交换，和指针挪动就好。
 	 * 
 	 * 当链表长度为奇数时，ptr2.next可能为null；
@@ -112,13 +115,23 @@ public class SwapNodesInPairs {
 		ListNode ptr2 = head;
 
 		while (ptr2 != null && ptr2.next != null) {
-			ListNode nextstart = ptr2.next.next;
-			ptr2.next.next = ptr2;
 			ptr1.next = ptr2.next;
-			ptr2.next = nextstart;
+			ptr2.next = ptr2.next.next;
+			ptr1.next.next = ptr2;
 			ptr1 = ptr2;
 			ptr2 = ptr2.next;
 		}
+		/**
+		 * while (ptr2 != null && ptr2.next != null) {
+		 *
+		 * ListNode nextstart = ptr2.next.next;
+		 * ptr2.next.next = ptr2;
+		 * ptr1.next = ptr2.next;
+		 * ptr2.next = nextstart;
+		 * ptr1 = ptr2;
+		 * ptr2 = ptr2.next;
+		 * }
+		 **/
 		return fakehead.next;
 	}
 }
