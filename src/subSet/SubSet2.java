@@ -47,6 +47,7 @@ public class SubSet2 {
 			temp.add(num[i]);
 			dfsWorker(num, i + 1, temp, rtn);
 
+			rtn.add(new ArrayList<Integer>(temp));
 			temp.remove(temp.size() - 1);
 
 			// skip duplicate elements to avoid duplicate subsets
