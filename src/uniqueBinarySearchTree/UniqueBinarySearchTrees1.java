@@ -1,14 +1,21 @@
 package uniqueBinarySearchTree;
 
 /**
- * Using DP:
- *
- * f(n)= Sigma(i: 0...n-1)(f(i)*f(n-1-i))
- *
- * @author Ricky
- *
+ * Given n, how many structurally unique BST's (binary search trees) that store values 1...n?
+
+ For example,
+ Given n = 3, there are a total of 5 unique BST's.
  */
+
 public class UniqueBinarySearchTrees1 {
+	/**
+	 * Using DP:
+	 * 
+	 * f(n)= Sigma(i: 0...n-1)(f(i)*f(n-1-i))
+	 * 
+	 * @author Ricky
+	 * 
+	 */
 	public static int numTrees(int n) {
 		int[] f = new int[n + 1];
 		f[0] = 1;

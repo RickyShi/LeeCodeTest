@@ -1,5 +1,12 @@
 package linkedListCycle;
 
+/**
+ * Given a linked list, return the node where the cycle begins.
+ * If there is no cycle, return null.
+ * 
+ * @author Ricky
+ * 
+ */
 public class LinkedListCycle2 {
 	public ListNode detectCycle(ListNode head) {
 		ListNode fast = head, slow = head;

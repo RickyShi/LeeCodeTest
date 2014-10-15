@@ -13,8 +13,8 @@ package containerWithMostWater;
  */
 public class ContainerWithMostWater {
 	/**
-	 * Two point move to middle
-	 * 
+	 * Two pointers move to middle
+	 *
 	 * @param height
 	 * @return
 	 */
