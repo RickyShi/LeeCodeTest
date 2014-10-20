@@ -19,6 +19,26 @@ import sortList.ListNode;
  */
 public class ReverseLinkedList2 {
 	public ListNode reverseBetween(ListNode head, int m, int n) {
-
+		if (head == null || head.next == null || m == n) {
+			return head;
+		}
+		int i = 1;
+		ListNode pre = new ListNode(-1);
+		pre.next = head;
+		ListNode fakeHead = pre;
+		while (i < m) {
+			pre = pre.next;
+			i++;
+		}
+		ListNode cur = pre.next;
+		while (i < n) {
+			ListNode next = cur.next;
+			cur.next = next.next;
+			next.next = pre.next;
+			pre.next = next;
+			i++;
+		}
+		return fakeHead.next;
 	}
 }
+
