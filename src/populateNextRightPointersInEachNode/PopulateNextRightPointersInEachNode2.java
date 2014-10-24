@@ -27,6 +27,13 @@ package populateNextRightPointersInEachNode;
  *
  */
 public class PopulateNextRightPointersInEachNode2 {
+	/**
+	 * recursive way
+	 * Reference: http://goo.gl/qo6rGk
+	 * first right side, then left side
+	 * 
+	 * @param root
+	 */
 	public void connect(TreeLinkNode root) {
 		if (root == null) {
 			return;
