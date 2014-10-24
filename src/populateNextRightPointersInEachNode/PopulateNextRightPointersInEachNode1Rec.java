@@ -1,6 +1,6 @@
 package populateNextRightPointersInEachNode;
 
-public class populateNextRightPointersInEachNode1Rec {
+public class PopulateNextRightPointersInEachNode1Rec {
 	/**
 	 * Recursive way
 	 */
