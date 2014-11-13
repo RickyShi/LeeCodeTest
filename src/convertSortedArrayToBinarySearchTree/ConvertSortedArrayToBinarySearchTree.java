@@ -3,9 +3,9 @@ package convertSortedArrayToBinarySearchTree;
 /**
  * Given an array where elements are sorted in ascending order, convert it to a
  * height balanced BST.
- * 
+ *
  * @author Ricky
- * 
+ *
  */
 class TreeNode {
 	int val;
@@ -17,6 +17,12 @@ class TreeNode {
 	}
 }
 public class ConvertSortedArrayToBinarySearchTree {
+	/**
+	 * RECURSIVE Build Top-Down
+	 * 
+	 * @param num
+	 * @return
+	 */
 	public TreeNode sortedArrayToBST(int[] num) {
 		if (num == null || num.length == 0) {
 			return null;
