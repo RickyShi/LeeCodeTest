@@ -1,4 +1,4 @@
-package repo_2018.distributeCandies;
+package repo_2018.distributeCandies_575;
 
 import java.util.HashSet;
 
