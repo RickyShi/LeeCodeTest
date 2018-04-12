@@ -104,7 +104,7 @@ public class Solution {
     }
 
     /**
-     * Algorithm
+     * Approach 1: DFS Algorithm
      * <p>
      * One of the methods to solve the given problem is to make use of Depth First Search. In DFS, we try to exhaust each branch of the given tree during the tree traversal before moving onto the next branch.
      * <p>
