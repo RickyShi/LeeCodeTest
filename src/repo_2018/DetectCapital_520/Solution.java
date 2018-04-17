@@ -1,6 +1,13 @@
 package repo_2018.DetectCapital_520;
 
 public class Solution {
+
+    public boolean detectCapitalUseSmple(String word) {
+        int cnt = 0;
+        for(char c: word.toCharArray()) if(Character.isUpperCase(c)) cnt++;
+        return ((cnt==0 || cnt==word.length()) || (cnt==1 && 'Z' - word.charAt(0)>=0));
+    }
+
     public boolean detectCapitalUse(String word) {
         if (word==null||word.isEmpty()) return false;
         if (word.length()==1) return true;
