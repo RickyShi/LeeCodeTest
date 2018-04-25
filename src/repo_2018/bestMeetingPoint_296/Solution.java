@@ -27,6 +27,9 @@ package repo_2018.bestMeetingPoint_296;
  * <p>
  * Approach1
  * 我们通过分析可以得出，P点的最佳位置就是在[A, B]区间内，这样和四个点的距离之和为AB距离加上CD距离，在其他任意一点的距离都会大于这个距离，那么分析出来了上述规律，这题就变得很容易了，我们只要给位置排好序，然后用最后一个坐标减去第一个坐标，即CD距离，倒数第二个坐标减去第二个坐标，即AB距离，以此类推，直到最中间停止，那么一维的情况分析出来了，二维的情况就是两个一维相加即可
+ * <p>
+ * Approach1
+ * 我们通过分析可以得出，P点的最佳位置就是在[A, B]区间内，这样和四个点的距离之和为AB距离加上CD距离，在其他任意一点的距离都会大于这个距离，那么分析出来了上述规律，这题就变得很容易了，我们只要给位置排好序，然后用最后一个坐标减去第一个坐标，即CD距离，倒数第二个坐标减去第二个坐标，即AB距离，以此类推，直到最中间停止，那么一维的情况分析出来了，二维的情况就是两个一维相加即可
  */
 /**
  * Approach1
@@ -42,8 +45,8 @@ import java.util.List;
  */
 public class Solution {
     public int minTotalDistance(int[][] grid) {
-        List<Integer> ipos = new ArrayList<Integer>();
-        List<Integer> jpos = new ArrayList<Integer>();
+        List<Integer> ipos = new ArrayList<>();
+        List<Integer> jpos = new ArrayList<>();
         // 统计出有哪些横纵坐标
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[0].length; j++) {
