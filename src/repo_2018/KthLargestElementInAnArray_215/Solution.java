@@ -6,13 +6,6 @@ public class Solution {
     public static void main(String[] args){
         Solution solution = new Solution();
 
-        System.out.print(solution.findKthLargest(new int[]{9, 3, 2, 4, 6, 5,0}, 5)+ " ");
-        for (int i=1;i<=7;i++) {
-            System.out.print(solution.findKthLargest(new int[]{9, 3, 2, 4, 6, 5,0}, i)+ " ");
-        }
-
-        System.out.println();
-
         int[] array = {9, 8, 7, 6, 5, 0, 1, 2, 3, 4};
         for (int i = 1; i <= array.length; i++) {
             System.out.print(solution.findKthLargest(array, i)+ " ");
