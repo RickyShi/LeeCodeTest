@@ -42,7 +42,7 @@ public class Solution {
             }
 
             // select a pivotIndex between left and right
-            int pivotIndex = (right-left)/2;
+            int pivotIndex = (right+left)/2;
             pivotIndex = partition(array, left, right, pivotIndex);
             // The pivot is in its final sorted position
             if (n == pivotIndex) {
@@ -96,4 +96,8 @@ public class Solution {
         }
 
     }
+     public static void main(String[] args) {
+         SolutionMedian solutionMedian = (new Solution()).new SolutionMedian();
+         System.out.println(solutionMedian.selectRecursive(new int[] {2,1,3},1));
+     }
 }
