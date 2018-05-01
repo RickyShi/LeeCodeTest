@@ -1,5 +1,7 @@
 package repo_2018.bestTimeToBuyAndSellStock4_188;
 
+import java.util.Arrays;
+
 public class Solution {
 
     /**
@@ -32,9 +34,9 @@ public class Solution {
             int localMax = /*dp[i-1][0]*/ - prices[0];
             for (int j = 1; j < n; j++) {
                 dp[i][j] = Math.max(dp[i][j-1],  prices[j] + localMax);
-                //j is also working
+                //j is also working, 推到出结果
                 localMax = Math.max(localMax, dp[i-1][j] - prices[j]);
-                //j-1 is also working
+                //j-1 is also working， 根据注释里的理解j-1似乎更正确
 //                localMax = Math.max(localMax, dp[i-1][j-1] - prices[j]);
             }
          }
@@ -57,5 +59,31 @@ public class Solution {
             }
         }
         return T[k][prices.length-1];
+    }
+
+    /**
+     * 画状态图 的 做法
+     */
+    public int maxProfit2(int k, int[] prices) {
+        if(prices==null || prices.length<=1) return 0;
+        int len = prices.length;
+        if (k>len/2){ // simple case
+            int res = 0;
+            for (int i=1; i<len; ++i){
+                if(prices[i] > prices[i-1])
+                    res += prices[i] - prices[i-1];
+            }
+            return res;
+        }
+        int[] hold = new int[k+1];
+        int[] sold = new int[k+1];
+        Arrays.fill(hold, Integer.MIN_VALUE);
+        for(int price : prices) {
+            for(int j=1; j<=k; j++) {
+                hold[j] = Math.max(hold[j], sold[j-1]-price); // hold->hold, sold->hold
+                sold[j] = Math.max(sold[j], hold[j]+price); // sold->sold, hold->sold
+            }
+        }
+        return sold[k];
     }
 }
