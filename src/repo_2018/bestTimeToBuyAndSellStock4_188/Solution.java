@@ -32,7 +32,10 @@ public class Solution {
             int localMax = /*dp[i-1][0]*/ - prices[0];
             for (int j = 1; j < n; j++) {
                 dp[i][j] = Math.max(dp[i][j-1],  prices[j] + localMax);
+                //j is also working
                 localMax = Math.max(localMax, dp[i-1][j] - prices[j]);
+                //j-1 is also working
+//                localMax = Math.max(localMax, dp[i-1][j-1] - prices[j]);
             }
          }
         return dp[k][n-1];
