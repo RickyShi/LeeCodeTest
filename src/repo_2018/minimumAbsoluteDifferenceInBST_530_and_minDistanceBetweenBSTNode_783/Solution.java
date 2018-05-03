@@ -1,4 +1,4 @@
-package repo_2018.minimumAbsoluteDifferenceInBST_530;
+package repo_2018.minimumAbsoluteDifferenceInBST_530_and_minDistanceBetweenBSTNode_783;
 
 import repo_2018.commonStructure.TreeNode;
 
