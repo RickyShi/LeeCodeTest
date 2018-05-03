@@ -21,14 +21,14 @@ public class Solution {
     }
 
     /**
-     * each node visit too much times, so it is slower than first one
+     * no global Ricky's Way
      */
     public int findTilt2(TreeNode root) {
         if (root == null) return 0;
 
         int currentTilt = Math.abs(findNodeSum(root.left) - findNodeSum(root.right));
 
-        return currentTilt + findTilt(root.left) + findTilt(root.right);
+        return currentTilt + findTilt2(root.left) + findTilt2(root.right);
     }
 
     public int findNodeSum(TreeNode root) {
@@ -47,8 +47,19 @@ public class Solution {
         t1.right = t3;
         t2.left = t4;
         t3.left = t5;
-
         Solution solution = new Solution();
+
+        long startTime = System.nanoTime();
         System.out.println(solution.findTilt(t1));
+        long endTime = System.nanoTime();
+        System.out.println(endTime - startTime);
+
+        startTime = System.nanoTime();
+        System.out.println(solution.findTilt2(t1));
+        endTime = System.nanoTime();
+        System.out.println(endTime - startTime);
+
+
+
     }
 }
