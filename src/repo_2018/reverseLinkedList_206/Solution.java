@@ -1,6 +1,6 @@
 package repo_2018.reverseLinkedList_206;
 
-import repo_2018.commonStructure.ListNode;
+import commonStructure.ListNode;
 
 public class Solution {
     public ListNode reverseList(ListNode head) {

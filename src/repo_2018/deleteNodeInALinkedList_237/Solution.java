@@ -1,6 +1,6 @@
 package repo_2018.deleteNodeInALinkedList_237;
 
-import repo_2018.commonStructure.ListNode;
+import commonStructure.ListNode;
 
 public class Solution {
     public void deleteNode(ListNode node) {

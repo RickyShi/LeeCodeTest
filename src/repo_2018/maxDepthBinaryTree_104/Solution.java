@@ -1,6 +1,6 @@
 package repo_2018.maxDepthBinaryTree_104;
 
-import repo_2018.commonStructure.TreeNode;
+import commonStructure.TreeNode;
 
 import java.util.Stack;
 

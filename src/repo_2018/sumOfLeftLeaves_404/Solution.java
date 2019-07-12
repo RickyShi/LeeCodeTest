@@ -1,6 +1,6 @@
 package repo_2018.sumOfLeftLeaves_404;
 
-import repo_2018.commonStructure.TreeNode;
+import commonStructure.TreeNode;
 
 import java.util.Stack;
 

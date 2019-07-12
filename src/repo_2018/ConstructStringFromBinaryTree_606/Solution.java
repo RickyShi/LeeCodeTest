@@ -1,6 +1,6 @@
 package repo_2018.ConstructStringFromBinaryTree_606;
 
-import repo_2018.commonStructure.TreeNode;
+import commonStructure.TreeNode;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -1,6 +1,6 @@
 package repo_2018.convertBSTToGreaterTree_538;
 
-import repo_2018.commonStructure.TreeNode;
+import commonStructure.TreeNode;
 
 import java.util.Stack;
 

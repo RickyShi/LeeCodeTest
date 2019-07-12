@@ -1,6 +1,6 @@
 package repo_2018.diameterOfBinary_543;
 
-import repo_2018.commonStructure.TreeNode;
+import commonStructure.TreeNode;
 
 /**
  * Approach #1: Depth-First Search [Accepted]

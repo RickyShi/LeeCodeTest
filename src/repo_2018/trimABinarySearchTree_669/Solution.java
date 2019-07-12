@@ -1,6 +1,6 @@
 package repo_2018.trimABinarySearchTree_669;
 
-import repo_2018.commonStructure.TreeNode;
+import commonStructure.TreeNode;
 
 
 /**     Complexity Analysis

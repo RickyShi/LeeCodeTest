@@ -1,6 +1,6 @@
 package repo_2018.sameTree_100;
 
-import repo_2018.commonStructure.TreeNode;
+import commonStructure.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

@@ -1,6 +1,6 @@
 package repo_2018.convertSortedArrayToBinarySearchTree_108;
 
-import repo_2018.commonStructure.TreeNode;
+import commonStructure.TreeNode;
 
 public class Solution {
     public TreeNode sortedArrayToBST(int[] nums){

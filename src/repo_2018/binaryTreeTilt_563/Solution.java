@@ -1,6 +1,6 @@
 package repo_2018.binaryTreeTilt_563;
 
-import repo_2018.commonStructure.TreeNode;
+import commonStructure.TreeNode;
 
 public class Solution {
 

@@ -1,6 +1,6 @@
 package repo_2018.averageLevelsBinaryTree_637;
 
-import repo_2018.commonStructure.TreeNode;
+import commonStructure.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

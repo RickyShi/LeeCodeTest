@@ -1,6 +1,6 @@
 package repo_2018.minimumAbsoluteDifferenceInBST_530_and_minDistanceBetweenBSTNode_783;
 
-import repo_2018.commonStructure.TreeNode;
+import commonStructure.TreeNode;
 
 import java.util.TreeSet;
 
