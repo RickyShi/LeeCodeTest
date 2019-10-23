@@ -8,7 +8,7 @@ import java.util.Arrays;
  * Think geometrically. Imagine plotting a histogram where the yy-axis represents the number of citations for each paper.
  * After sorting in descending order, hh-index is the length of the largest square in the histogram.
  */
-public class q294_h_index {
+public class q274_h_index {
     /**
      * Algorithm Comparison Sort
      * To find such a square length, we first sort the citations array in descending order.
