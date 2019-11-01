@@ -11,9 +11,10 @@ public class q697_degreeOfAnArray {
         Map<Integer, Integer> count = new HashMap<>();
 
         for (int i = 0; i < nums.length; i++) {
-            if (left.get(nums[i]) == null) {
+            left.putIfAbsent(nums[i], i);
+            /*if (left.get(nums[i]) == null) {
                 left.put(nums[i], i);
-            }
+            }*/
             right.put(nums[i], i);
             count.put(nums[i], count.getOrDefault(nums[i], 0) + 1);
         }
