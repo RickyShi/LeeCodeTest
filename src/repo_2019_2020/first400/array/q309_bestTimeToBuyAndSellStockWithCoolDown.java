@@ -1,10 +1,9 @@
-package repo_2018.bestTimeToBuyAndSellStockWithCoolDown_309;
+package repo_2019_2020.first400.array;
 
-public class Solution {
-
-    /**
-     * 状态图 https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/discuss/126913/Java-Solution-time-O(n)-space-O(1)
-     */
+public class q309_bestTimeToBuyAndSellStockWithCoolDown {
+/**
+ * 状态图 https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/discuss/126913/Java-Solution-time-O(n)-space-O(1)
+ */
     /**
      * for any day[i], there are three possible state:
      * rest: means you don't have stock, be in this state by selling( then cooldown) or keep rest.
