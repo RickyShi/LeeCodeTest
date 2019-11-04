@@ -1,7 +1,6 @@
-package repo_2018.bestTimeToBuyAndSellStock2_122;
+package repo_2019_2020.first400.array;
 
-public class Solution {
-
+public class q122_bestTimeToBuyAndSellStocks2 {
     /**
      * Approach #1 Brute Force [Time Limit Exceeded]
      * In this case, we simply calculate the profit corresponding to all the possible sets of transactions and find out the maximum profit out of them.
@@ -82,5 +81,4 @@ public class Solution {
             return maxProfit;
         }
     }
-
 }
