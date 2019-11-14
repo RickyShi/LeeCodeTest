@@ -4,7 +4,10 @@ public class q4_medianOfTwoSortedArray {
     /**
      * Analysis:
      * In order to solve this question, we need to first understand what a median is. A median is the middle value of a dataset.
-     * Since we have 2 seperately sorted array in this question, to find the middle value is somewhat complicated. However, keep in mind that we do not care about the actual value of the numbers, what we want is the middle point from the combination of 2 arrays. In other words, we are looking for the middle index of the 2 arrays. Thus approach like binary search could be employed.
+     * Since we have 2 seperately sorted array in this question, to find the middle value is somewhat complicated.
+     * However, keep in mind that we do not care about the actual value of the numbers,
+     * what we want is the middle point from the combination of 2 arrays.
+     * In other words, we are looking for the middle index of the 2 arrays. Thus approach like binary search could be employed.
      * Based on the fact that the 2 arrays are sorted seperatedly, we could try to get the submedian of the 2 arrays in each round. Than compare them.
      * <p>
      * And the basic idea is that the left half of the array with a smaller submedian can never contains the common median.
